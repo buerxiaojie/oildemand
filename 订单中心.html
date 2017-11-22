@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>油我发起</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" CONTENT="-1">           
+<meta http-equiv="Cache-Control" CONTENT="no-cache">           
+<meta http-equiv="Pragma" CONTENT="no-cache">       
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/def.css">
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+	$('.order-center2 dt').click(function(){
+		var _next = $(this).next("dd");
+		if(_next.is(":hidden")){
+			$(this).addClass('cur');
+			_next.slideDown();
+		}else{
+			_next.slideUp();	
+			$(this).removeClass('cur');
+		}
+	}).eq(0).trigger("click");
+	
+	var oMenu = $('.fixed-menu');
+	
+	$('.header-box .nav').click(function(e){
+		
+		if(oMenu.is(":hidden")){
+			 oMenu.show();
+		}else{
+			 oMenu.hide();
+		}
+		
+		e.stopPropagation();
+
+	});
+	
+	$("html,body").click(function(){
+		oMenu.hide();
+	});
+})
+</script>
+<script>
+window.onload = function(){
+	var aBtn = document.getElementById('version');
+	aBtn.onclick = function(){
+		if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+			window.location="https://itunes.apple.com/cn/app/zhong-jing-you-ma/id993707391";
+			}
+			else if (browser.versions.android) {
+			window.location="http://a.app.qq.com/o/simple.jsp?pkgname=com.hanzi.chinaexpress";
+		} 
+	}
+	// document.writeln("语言版本: " + browser.language);
+	// document.writeln(" 是否为移动终端: " + browser.versions.mobile);
+	// document.writeln(" ios终端: " + browser.versions.ios);
+	// document.writeln(" android终端: " + browser.versions.android);
+	// document.writeln(" 是否为iPhone: " + browser.versions.iPhone);
+	// document.writeln(" 是否iPad: " + browser.versions.iPad);
+	// document.writeln(navigator.userAgent);
+}
+
+var browser = {
+	versions: function() {
+	var u = navigator.userAgent, app = navigator.appVersion;
+	return {//移动终端浏览器版本信息 
+	trident: u.indexOf('Trident') > -1, //IE内核
+	presto: u.indexOf('Presto') > -1, //opera内核
+	webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+	gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+	mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+	ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+	android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+	iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+	iPad: u.indexOf('iPad') > -1, //是否iPad
+	webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+	};
+	}(),
+	language: (navigator.browserLanguage || navigator.language).toLowerCase()
+}
+
+</script>
+
+</head>
+
+<body bgcolor="#fafafa">
+
+<section class="fixed-menu hide">
+	<ul>
+    	<li><a href="#"><img src="images/icons/nav1.jpg">我要发起</a></li>
+        <li><a href="#"><img src="images/icons/nav2.jpg">订单中心</a></li>
+        <li><a href="#"><img src="images/icons/nav5.jpg">消费明细</a></li>
+        <li><a href="#"><img src="images/icons/nav7.jpg">地址管理</a></li>
+        <li><a href="#"><img src="images/icons/nav3.jpg">帮助中心</a></li>
+        <li><a href="#"><img src="images/icons/nav6.jpg">退出登录</a></li>
+    </ul>
+</section>
+
+<header class="header-box">
+	<div class="wrap">
+    	<a class="back" href="javascript:history.back(-1);"></a>
+    	<h2>油我发起</h2>
+        <a href="#" class="nav"></a>
+    </div>
+</header>
+
+<section class="container-box">
+
+	<div class="advert-box clearfix">
+    	<span id="version"><img src="images/icons/down-app.jpg"></span>
+        <span><img src="images/icons/gz-weixin.jpg"></span>
+        <i></i>
+    </div>
+
+	<nav class="nav-tab nav-tab2">
+    	<ul>
+            <li><a href="#">成功订单</a></li>
+            <li><a href="#">失败订单</a></li>
+            <li class="cur"><a href="#">待处理订单</a></li>
+        </ul>
+    </nav>
+    
+    <div class="order-center2">
+    	<div class="invoice-link clearfix"><a href="#">索要发票<i></i></a></div>
+    	<dl>
+        	<dt class="cur">
+            	<div class="hd">折扣金额：500元<span>折扣：9折</span><i></i></div>
+                <div class="bd">响应油站：敦本加油站 - 广东省广州市天河区长湴村长兴</div>
+            </dt> 
+            <dd>
+            	<ul>
+                    <li>
+                        <span class="l fl">油品</span>
+                        <span class="r">92#</span>
+                    </li>
+                    <li>
+                        <span class="l fl">订单状态</span>
+                        <span class="r"><em>成功</em></span>
+                    </li>
+                    <li>
+                        <span class="l fl">发起时间</span>
+                        <span class="r">2015/9/1 13:26</span>
+                    </li>
+                    <li>
+                        <span class="l fl">响应时间</span>
+                        <span class="r">2015/9/1 13:26</span>
+                    </li>
+                    <li><a class="btn-fq fr" href="#">再次发起</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl>
+        	<dt>
+            	<div class="hd">折扣金额：500元<span>折扣：9折</span><i></i></div>
+                <div class="bd">响应油站：敦本加油站 - 广东省广州市天河区长湴村长兴</div>
+            </dt> 
+            <dd>
+            	<ul>
+                    <li>
+                        <span class="l fl">油品</span>
+                        <span class="r">92#</span>
+                    </li>
+                    <li>
+                        <span class="l fl">订单状态</span>
+                        <span class="r"><em>成功</em></span>
+                    </li>
+                    <li>
+                        <span class="l fl">发起时间</span>
+                        <span class="r">2015/9/1 13:26</span>
+                    </li>
+                    <li>
+                        <span class="l fl">响应时间</span>
+                        <span class="r">2015/9/1 13:26</span>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        
+        <a class="check-more" href="#">查看更多>></a>
+    </div>
+   
+</section>
+
+
+</body>
+</html>

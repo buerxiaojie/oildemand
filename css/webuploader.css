@@ -1,0 +1,82 @@
+.webuploader-container {
+	position: relative;
+}
+.webuploader-element-invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+}
+.webuploader-pick {
+	position: relative;
+	width: 62px;
+	height: 47px;
+}
+.webuploader-pick-disable {
+	opacity: 0.6;
+	pointer-events: none;
+}
+.file-item {
+	float: left;
+	position: relative;
+	margin-right: 1px;
+}
+.file-item .remove-this {
+	background: url(../images/x_alt.png);
+	background-size: cover;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 10;
+	cursor: pointer;
+}
+.file-item .error {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: red;
+	color: white;
+	text-align: center;
+	height: 18px;
+	font-size: 12px;
+	line-height: 18px;
+}
+.file-item .progress {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 4px;
+	overflow: hidden;
+	z-index: 15;
+	background: transparent;
+}
+.file-item .progress span {
+	display: block;
+	overflow: hidden;
+	width: 0;
+	height: 100%;
+	background: #d14 url(../images/icons/progress.png) repeat-x;
+	-webit-transition: width 200ms linear;
+	transition: width 200ms linear;
+	-webkit-animation: progressmove 2s linear infinite;
+	animation: progressmove 2s linear infinite;
+	-webkit-transform: translateZ(0);
+}
+@-webkit-keyframes progressmove {
+ 0% {
+ background-position: 0 0;
+}
+ 100% {
+ background-position: 17px 0;
+}
+}
+ @keyframes progressmove {
+ 0% {
+ background-position: 0 0;
+}
+ 100% {
+ background-position: 17px 0;
+}
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>油我发起</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" CONTENT="-1">           
+<meta http-equiv="Cache-Control" CONTENT="no-cache">           
+<meta http-equiv="Pragma" CONTENT="no-cache">       
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/def.css">
+<script src="js/jquery.js"></script>
+<script src="js/global.js"></script>
+<script>
+$(function(){
+	
+	$('.footer-btn a').click(function(){
+		$('.page1').hide();	
+		$('.page2').show();	
+		$('.header-box').find('.txt').show();
+	});
+	
+	$('.station-list .bd li .check').click(function(){
+		$(this).toggleClass('cur');
+	});
+	
+	$('.station-list .bd li i').click(function(){
+		$(this).toggleClass('active');
+	});
+	
+	$('#all-select').click(function(){
+		if($(this).text()=="全选"){
+			$('.station-list .bd li').addClass('cur');
+			$(this).text('取消全选');
+		}else{
+			$('.station-list .bd li').removeClass('cur');
+			$(this).text('全选');
+		}
+	});
+	
+	$('.tab-sel a').tab({ tabBd : ".tab-Bd .tab-bd"});
+})
+</script>
+
+</head>
+
+<body bgcolor="#fafafa">
+
+<header class="header-box">
+	<div class="wrap">
+    	<a class="back" href="javascript:history.back(-1);"></a>
+    	<h2>油我发起</h2>
+    </div>
+</header>
+
+<section class="page1">
+
+    <section class="container-box" style=" font-size: 14px;">
+    
+    	<div class="tab-sel clearfix" style="font-size:16px; padding-bottom:0;">
+            <a class="fl cur" href="javascript:;"><i class="icon5"></i>按区域选择</a>
+            <a class="fr" href="javascript:;"><i class="icon6"></i>按收藏选择</a>
+        </div>
+        
+        <div class="tab-Bd">
+        	<div class="tab-bd">
+    
+                <div class="select-area">
+                    <dl>
+                        <dt>选择区域</dt>
+                        <dd>
+                            <select class="sel sel3 fl"><option>省份/自治区</option></select>
+                            <select class="sel sel3 fl" style="margin: 0 2%;"><option>城市/地区</option></select>
+                            <select class="sel sel3 fl"><option>区/县</option></select>
+                        </dd>
+                    </dl>
+                    <dl class="fl" style="width:49%; margin-right: 2%;">
+                        <dt>我的油品</dt>
+                        <dd>
+                            <select class="sel"><option>92#</option></select>
+                        </dd>
+                    </dl>
+                    <dl class="fl" style="width:49%;">
+                        <dt>所需卡数/张<a href="#">共享金额</a></dt>
+                        <dd>
+                            <input type="text" class="ipt" placeholder="填写您所要的卡数">
+                        </dd>
+                    </dl>
+                    <div class="clearfix"></div>
+                    <dl>
+                        <dt>认购金额</dt>
+                        <dd class="clearfix">
+                            <select class="sel sel2 fl"><option>1000</option></select>
+                            <input type="text" class="ipt ipt2 fr" placeholder="自定义金额">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>我想要的优惠</dt>
+                        <dd>
+                            <div class="select-discount clearfix">
+                                <span class="cur">3%</span>
+                                <span>4%</span>
+                                <span>5%</span>
+                            </div>
+                            <input type="text" class="ipt" placeholder="请输入您想要的优惠幅度">
+                            <span class="tip">成功率：97.51%</span>
+                        </dd>
+                    </dl>
+                    
+                    <div class="height70"></div>
+                    
+                    <div class="footer-btn">
+                        <a  href="javascript:;">确定</a>
+                    </div>   
+                    
+                </div>
+        
+        	</div>
+            
+            <div class="tab-bd hide">
+        
+                <div class="select-area">
+
+                    <dl class="fl" style="width:49%; margin-right: 2%;">
+                        <dt>我的油品</dt>
+                        <dd>
+                            <select class="sel"><option>92#</option></select>
+                        </dd>
+                    </dl>
+                    <dl class="fl" style="width:49%;">
+                        <dt>所需卡数/张<a href="#">共享金额</a></dt>
+                        <dd>
+                            <input type="text" class="ipt" placeholder="填写您所要的卡数">
+                        </dd>
+                    </dl>
+                    <div class="clearfix"></div>
+                    <dl>
+                        <dt>认购金额</dt>
+                        <dd class="clearfix">
+                            <select class="sel sel2 fl"><option>1000</option></select>
+                            <input type="text" class="ipt ipt2 fr" placeholder="自定义金额">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>我想要的优惠</dt>
+                        <dd>
+                            <div class="select-discount clearfix">
+                                <span class="cur">3%</span>
+                                <span>4%</span>
+                                <span>5%</span>
+                            </div>
+                            <input type="text" class="ipt" placeholder="请输入您想要的优惠幅度">
+                            <span class="tip">成功率：97.51%</span>
+                        </dd>
+                    </dl>
+                    
+                    <div class="height70"></div>
+                    
+                    <div class="footer-btn">
+                        <a href="javascript:;">确定</a>
+                    </div>   
+                    
+                </div>
+            </div>    
+       	</div>
+        	
+    </section>
+
+</section>
+
+
+<section class="page2 hide">
+
+    <section class="container-box">
+    
+        <div class="station-list"  style="padding-top:15px;">
+            <div class="hd"><img width="16" src="images/icons/notice.jpg">请选择2个油站以上，不足请全选</div>
+            <nav class="nav-tab nav-tab2">
+                <ul>
+                    <li class="cur"><a href="#">排名</a></li>
+                    <li><a href="#">抢单率</a></li>
+                    <li><a href="#">最高优惠</a></li>
+                </ul>
+            </nav>
+            
+            <ul class="bd">
+                <li class="cur jian">
+                    <h3>敦本加油站<em>荐</em><i></i></h3>
+                    <p>广州省广州市天河区广汕公路柯木塱路段华美路口柯木塱路段华美路口柯木塱路段华美路口</p>
+                	<div class="ord clearfix">
+                    	<span class="tl">抢单率<b>87</b>%</span>
+                        <span class="tc">最高优惠<b>87</b>%</span>
+                        <span class="tr">已抢订单<b>8</b>单</span>
+                    </div>
+                    <div class="oil clearfix">
+                    	<span class="">92#<br/><b>5.70</b>元</span>
+                        <span class="">92#<br/><b>5.70</b>元</span>
+                        <span class="">92#<br/><b>5.70</b>元</span>
+                        <span class="">92#<br/><b>5.70</b>元</span>
+                        <span class="">92#<br/><b>5.70</b>元</span>
+                        <span class="">92#<br/><b>5.70</b>元</span>
+                    </div>
+                    <em class="check"></em>
+                </li>
+                <li>
+                    <h3>敦本加油站<i class="active"></i></h3>
+                    <p>广州省广州市天河区广汕公路柯木塱路段华美路口柯木塱路段华美路口柯木塱路段华美路口</p>
+                	<div class="ord clearfix">
+                    	<span class="tl">抢单率<b>87</b>%</span>
+                        <span class="tc">最高优惠<b>87</b>%</span>
+                        <span class="tr">已抢订单<b>8</b>单</span>
+                    </div>
+                    <div class="oil clearfix">
+                    	<span class="">92#<br/><b>5.70</b>元</span>
+                        <span class="">92#<br/><b>5.70</b>元</span>
+                        <span class="">92#<br/><b>5.70</b>元</span>
+                        <span class="">92#<br/><b>5.70</b>元</span>
+                    </div>
+                    <em class="check"></em>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="height70"></section>
+    
+    <footer class="footer-btn">
+    	<a class="a1" href="#" id="all-select">全选</a>
+        <a class="a2" href="#">马上发起</a>
+    </footer>
+
+</section>
+    
+</body>
+</html>

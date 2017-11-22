@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>油我发起</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" CONTENT="-1">           
+<meta http-equiv="Cache-Control" CONTENT="no-cache">           
+<meta http-equiv="Pragma" CONTENT="no-cache">       
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/def.css">
+<script src="js/jquery.js"></script>
+<script src="js/global.js"></script>
+<script>
+$(function(){
+	
+	$('#check-all').click(function(){
+		
+		if($(this).text() == "查看更多油站"){
+			$('.address-list li').removeClass('hide');
+			$(this).text("隐藏更多");
+		}else{
+			$('.address-list li').hide();
+			$('.address-list li').eq(0).show();
+			$('.address-list li').eq(1).show();
+			$(this).text('查看更多油站');
+		}
+		
+	});
+	
+	$('#selectCard a').tab({ tabBd : ".tab-sel-bd .wrap"});
+	
+	$('#selectQuan a').tab({ tabBd : ".tab-Quan .tab-quan"});
+	
+	$('#selectPay a').tabcur();
+	
+	$('.sel-red-page li').click(function(){
+		$(this).toggleClass('cur');	
+	});
+	
+	$('#btn-sy').click(function(){
+		$(this).toggleClass('cur');
+	});
+	
+})
+</script>
+
+</head>
+
+<body bgcolor="#fafafa">
+
+    <header class="header-box">
+        <div class="wrap">
+            <a class="back" href="javascript:;"></a>
+            <h2>订单确定</h2>
+        </div>
+    </header>
+    
+    
+    <section class="container-box">
+        <div class="confirm-infor">
+        
+        	<div class="notice">
+            	<p>温馨提示：</p>
+                <p>1.油站已抢单成功，而用户取消订单，退款将收取1%的支付金额作为手续费。</p>
+                <p>2.若用户发起后72小时内无油站应答，本公司将全额返还支付金额，不收取任何费用。</p>
+                <p>3.本站会以短信提醒您，请关注短信提示。</p>
+            </div>
+        
+            <ul>
+                <li>
+                    <span class="fl">认购金额</span>
+                    <span class="fr">¥ <em>1000</em>元</span>
+                </li>
+                <li>
+                    <span class="fl">我想要的优惠</span>
+                    <span class="fr"><em>8</em>%</span>
+                </li>
+                <li>
+                    <span class="fl">我的油品</span>
+                    <span class="fr"><em>92</em>#</span>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="address-list">
+            <h4>我选择的油站</h4>
+            <ul>
+                <li>
+                    <h3>敦本加油站<i></i></h3>
+                    <p>广州省广州市天河区广汕公路柯木塱路段华美路口柯木塱路段华美路口柯木塱路段华美路口</p>
+                </li>
+                <li>
+                    <h3>敦本加油站<i></i></h3>
+                    <p>广州省广州市天河区广汕公路柯木塱路段华美路口柯木塱路段华美路口柯木塱路段华美路口</p>
+                </li>
+                <li class="hide">
+                    <h3>敦本加油站<i></i></h3>
+                    <p>广州省广州市天河区广汕公路柯木塱路段华美路口柯木塱路段华美路口柯木塱路段华美路口</p>
+                </li>
+                <li class="hide">
+                    <h3>敦本加油站<i></i></h3>
+                    <p>广州省广州市天河区广汕公路柯木塱路段华美路口柯木塱路段华美路口柯木塱路段华美路口</p>
+                </li>
+            </ul>
+            <a href="javascript:;" id="check-all">查看更多油站</a>
+        </div>
+
+        <div class="form-box" style="padding-top:0">
+            <ul>
+                <li>
+                    <label class="hd"><img src="images/icons/icon-user.jpg"></label>
+                    <div class="bd">
+                        <input type="text" class="ipt" placeholder="请输入您的姓名">
+                    </div>
+                </li>
+                <li>
+                    <label class="hd"><img src="images/icons/icon-tel.png"></label>
+                    <div class="bd">
+                        <input type="text" class="ipt" placeholder="请输入您的手机号">
+                    </div>
+                </li>
+                <li>
+                    <label class="hd"><img src="images/icons/icon-IDcard.jpg"></label>
+                    <div class="bd">
+                        <input type="text" class="ipt" placeholder="请输入您的身份证号">
+                    </div>
+                </li>
+            </ul>
+    
+        </div>
+        
+        <div class="st-card">
+            <div class="txt-pro">
+                <p>电子卡好处：</p>
+                <p>1.电子卡即时到账，无需等待快递。</p>
+                <p>2.电子卡交易快捷，使用手机号码+密码的形式消费。</p>
+            </div>
+        </div>
+        
+        <div class="tab-sel clearfix" id="selectCard">
+            <a class="fl cur" href="javascript:;"><i class="icon3"></i>实体卡</a>
+            <a class="fr" href="javascript:;"><i class="icon4"></i>电子卡</a>
+        </div>
+        
+        
+        <div class="tab-sel clearfix" id="selectQuan">
+            <a class="fl cur" href="javascript:;">红包抵扣</a>
+            <a class="fr" href="javascript:;">电子券抵扣</a>
+        </div>
+       
+        
+        <div class="tab-Quan">
+            <div class="sel-red-page clearfix tab-quan">
+                
+                <ul>
+                    <li>
+                        <div class="col-1 fl"></div>
+                        <div class="col-2 fl">
+                            <h4>红包优惠</h4>
+                            <p><em>50</em>元</p>
+                        </div>
+                        <div class="col-3 fl"></div>
+                        <div class="col-4">
+                            <h4>首次发起成功红包</h4>
+                            <p>有效期：2016-1-31 </p>
+                        </div>
+                        <div class="col-5"></div>
+                    </li>
+                    <li class="cur">
+                        <div class="col-1 fl"></div>
+                        <div class="col-2 fl">
+                            <h4>红包优惠</h4>
+                            <p><em>50</em>元</p>
+                        </div>
+                        <div class="col-3 fl"></div>
+                        <div class="col-4">
+                            <h4>首次发起成功红包</h4>
+                            <p>有效期：2016-1-31 </p>
+                        </div>
+                        <div class="col-5"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="coupons-use tab-quan hide">
+                <div class="form-box" style="padding-top:0;">
+                    
+                    <ul>
+                        <li>
+                            <label class="hd"><img src="images/icons/icon-quan.jpg"></label>
+                            <div class="bd">
+                                <input type="text" class="ipt" placeholder="请输入电子劵劵码">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <label class="sy" id="btn-sy"><i></i>是否使用</label>
+            </div>
+        </div>
+        
+        <div class="pay-price">
+        	<h3>您还需要支付：</h3>
+            <ul>
+            	<li><span class="fr"><em>1000 </em>元</span>认购金额</li>
+                <li><span class="fr"><i>-100 </i>元</span>红包抵扣</li>
+                <li><span class="fr">共计支付：<b>1000 </b>元</span></li>
+            </ul>
+        </div>
+        
+        <div class="form-box" style="padding-top:5px;">
+            <ul>
+                <li>
+                    <label class="hd"><img src="images/icons/icon-redPage.jpg"></label>
+                    <div class="bd">
+                        <input type="text" class="ipt" placeholder="请输入红包支付密码">
+                    </div>
+                </li>
+            </ul>
+            <div class="tip clearfix"><a href="#" class="fr">设置支付密码</a>为确保资金安全，请输入支付密码</div>
+        </div>
+        
+        <div class="tab-sel-bd">
+        	<div class="wrap cur">
+            	<div class="select-area">
+                    <dl>
+                        <dt class="clearfix"><a href="#">选择地址</a>收货地址</dt>
+                        <dd>
+                            <select class="sel sel3 fl"><option>省份/自治区</option></select>
+                            <select class="sel sel3 fl" style="margin: 0 2%;"><option>城市/地区</option></select>
+                            <select class="sel sel3 fl"><option>区/县</option></select>
+                            <div class="height15 clearfix"></div>
+                            <input type="text" class="ipt" placeholder="路名或街道地址，门牌号">
+                        </dd>
+                    </dl>
+                    
+            	</div>
+            </div>
+            <div class="wrap hide">
+            
+            	<div class="form-box" style="padding-top:10px">
+                    <ul>
+                    	 <li>
+                            <label class="hd"><img src="images/icons/icon-tel.png"></label>
+                            <div class="bd">
+                                <input type="text" class="ipt" placeholder="请输入您的手机号">
+                                <input type="button" class="btn-code" value="获取验证码">
+                            </div>
+                        </li>
+                        <li>
+                            <label class="hd"><img src="images/icons/icon-code.png"></label>
+                            <div class="bd">
+                                <input type="text" class="ipt" placeholder="请输入验证码">
+                            </div>
+                        </li>
+                        <li>
+                            <label class="hd"><img src="images/icons/icon-pwd.png"></label>
+                            <div class="bd">
+                                <input type="text" class="ipt" placeholder="设置交易密码">
+                            </div>
+                        </li>
+                        <li>
+                            <label class="hd"><img src="images/icons/icon-pwd2.png"></label>
+                            <div class="bd">
+                                <input type="text" class="ipt" placeholder="确认交易密码">
+                            </div>
+                        </li>
+                        
+                    </ul>
+            
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="select-area">
+            <dl>
+                <dd>
+                    <input type="text" class="ipt" placeholder="请输入支付密码">
+                </dd>
+            </dl>  
+        </div>
+        
+        <div class="sel-pay">
+            <h3>选择支付方式</h3>
+            <div class="tab-sel clearfix" id="selectPay">
+                <a class="fl cur" href="javascript:;">线上支付</a>
+                <a class="fr" href="javascript:;">线下支付</a>
+            </div>
+        </div>
+        
+        <div class="agreement-box">点击上方的“提交”按钮，即表示同意<br/><a href="#">油我发起用户协议</a></div>
+        
+        <div class="height70"></div>
+        
+        <div class="footer-btn">
+            <a href="#" id="btn-sub">立即发起</a>
+        </div>    
+        
+        
+        
+    </section>
+
+    
+</body>
+</html>

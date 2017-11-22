@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>油我发起</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" CONTENT="-1">           
+<meta http-equiv="Cache-Control" CONTENT="no-cache">           
+<meta http-equiv="Pragma" CONTENT="no-cache">       
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/def.css">
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+	$('.common-problem dt').click(function(){
+		var _next = $(this).next("dd");
+		if(_next.is(":hidden")){
+			$(this).addClass('cur');
+			_next.slideDown();
+		}else{
+			_next.slideUp();	
+			$(this).removeClass('cur');
+		}
+	});
+	
+	var oMenu = $('.top-nav .bd');
+	
+	$('.top-nav .more').click(function(e){
+		
+		if(oMenu.is(":hidden")){
+			 oMenu.show();
+		}else{
+			 oMenu.hide();
+		}
+		
+		e.stopPropagation();
+
+	});
+	
+	$("html,body").click(function(){
+		oMenu.hide();
+	});
+})
+</script>
+
+
+</head>
+
+<body bgcolor="#fafafa">
+
+
+<section class="top-nav">
+	<ul class="hd clearfix">
+    	<li class="cur"><a href="javascript:;">即时抢单</a></li>
+        <li><a href="javascript:;">订单中心</a></li>
+        <li><a href="javascript:;">订单消费</a></li>
+    </ul>
+    <i class="more"></i>
+    <ul class="bd hide">
+    	<li><a href="javascript:;">常见问题</a></li>
+        <li><a href="javascript:;">退　　出</a></li>
+    </ul>
+</section>
+
+
+<section class="container-box">
+	<div class="common-problem">
+    	<h2 class="tc">油我发起”产品常见问题</h2>
+        <dl>
+        	<dt>一、购买须知<i></i></dt>
+            <dd>
+            	<div>
+                    <h3>1.	问：我是新用户，没有中经汇通加油卡，可以参与“油我发起”吗？</h3>
+                    <p>答：可以，即时是完全没有使用过本站产品的客户也可参与。当您成功支付并得到油站响应抢单后，会由本站在次日前免费为您邮寄“油我发起”专用卡。您收到油卡后可到指定的加油站持卡加油。</p>
+            	</div>
+                <div>
+                    <h3>2.	问：我要购买“油我发起”，怎么支付？可以使用支付宝、微信支付吗？</h3>
+                    <p>答：目前“油我发起”的支付渠道支持银联系统，包括银联卡支付、网银支付、银联钱包、迷你付。<br/>支付宝、微信支付（财付通）等更多支付渠道即将上线，敬请期待。</p>
+            	</div>
+                <div>
+                    <h3>3.	问：我没有网银，怎么支付？</h3>
+                    <p>答：非常抱歉，目前本产品暂无除网银外的其它支付渠道。我们正在努力提高用户体验，尽快上线更多支付方式作为补充，敬请期待。</p>
+            	</div>
+                <div>
+                    <h3>4.	问：我要怎么购买“油我发起”？</h3>
+                    <p>答：首先，请您<a style="text-decoration:underline" href="/webapp/register.html?backUrl=/webapp/demand/index.html" target="_blank">点击这里</a>注册有油网账户。若您已注册过有油网旗下产品（有油网、有油贷、油马APP使用中经汇通统一账户系统），可直接登录。<br/>接着，请您按流程提示发起订单，并支付您期望的充值金额，等待油站响应抢单。若有油站抢单，则由本站为您邮寄“油我发起”卡，您可直接持卡前往确认的油站消费；若无油站应答，超过3小时后，交易自动取消，金额将会原路退回，不收取任何费用。</p>
+            	</div>
+            </dd>
+        </dl>
+        <dl>
+        	<dt>二、使用须知<i></i></dt>
+            <dd>
+            	<div>
+                    <h3>1.	问：油卡余额用不完怎么办？卡会过期吗？</h3>
+                    <p>答：不用担心。“油我发起”卡是由您指定加油站与油品的专用卡产品，余额可<b>无限期无限次</b>使用哦！</p>
+            	</div>
+                <div>
+                    <h3>2.	问：“油我发起”可重复充值使用吗？</h3>
+                    <p>答：“油我发起”卡不支持续费充值功能，卡内金额可无限期多次使用，当余额被使用完后，本卡<b>自动作废</b>。<br/>若您仍然需要使用，可再次使用“油我发起”发布需求信息。</p>
+            	</div>
+                <div>
+                    <h3>3.	问：我买了卡，什么时候可以使用？</h3>
+                    <p>答：在您支付订单并有油站响应后，本站最迟将在次日前为您邮寄“油我发起”卡，当您收到卡后，请根据随卡附带的《“身份激活”指引》进行实名卡激活。激活成功后，即可持卡前往确认的油站加油消费。</p>
+            	</div>
+                <div>
+                    <h3>4.	问：“油我发起”卡的余额可以用作其它消费吗？可以在加油站购物吗？</h3>
+                    <p>答：抱歉，目前“油我发起”专用卡余额仅用于您<b>在确认的加油站消费您确认的油品</b>。若您有更多消费需求，本站还有<a style="text-decoration:underline" href="#">更多超值产品</a>供您选择。</p>
+            	</div>
+                <div>
+                    <h3>5.	问：“油我发起”卡余额不足，怎么办？</h3>
+                    <p>答：您好，“油我发起”卡必须按额加油，加油金额不可大于“油我发起”卡的余额，超出部分不可使用现金或刷卡。一次支付只能使用一张“油我发起”卡。所以在您加油前，请务必与加油站工作人员确认后再加油。</p>
+            	</div>
+                <div>
+                    <h3>6.	问：我可以把我的卡给家人或朋友使用吗？</h3>
+                    <p>答：可以，您可将卡转让给第三方使用。但您应保证第三方知悉并同意遵守用户协议全部条款，否则本站有权停止该“油我发起”卡的使用，且用户须承担因此产生的一切损失及法律责任。</p>
+            	</div>
+            </dd> 
+        </dl>
+        
+    </div>
+	 
+</section>
+
+
+</body>
+</html>

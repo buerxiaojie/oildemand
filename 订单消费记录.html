@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>油我发起</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" CONTENT="-1">           
+<meta http-equiv="Cache-Control" CONTENT="no-cache">           
+<meta http-equiv="Pragma" CONTENT="no-cache">       
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/def.css">
+<script src="js/jquery.js"></script>
+<script src="js/global.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/date.js"></script>
+<script>
+$(function(){
+	$('.order-center dt').click(function(){
+		var _next = $(this).next("dd");
+		if(_next.is(":hidden")){
+			$(this).addClass('cur');
+			_next.slideDown();
+		}else{
+			_next.slideUp();	
+			$(this).removeClass('cur');
+		}
+	}).eq(0).trigger("click");
+	
+	$('#selectCard a').tabcur();
+	
+	var oMenu = $('.fixed-menu');
+	
+	$('.header-box .nav').click(function(e){
+		
+		if(oMenu.is(":hidden")){
+			 oMenu.show();
+		}else{
+			 oMenu.hide();
+		}
+		
+		e.stopPropagation();
+
+	});
+	
+	$("html,body").click(function(){
+		oMenu.hide();
+	});
+	
+	$('#beginTime').date();
+	$('#endTime').date();
+})
+</script>
+
+
+</head>
+
+<body bgcolor="#fafafa">
+
+
+<section class="fixed-menu hide">
+	<ul>
+    	<li><a href="#"><img src="images/icons/nav1.jpg">我要发起</a></li>
+        <li><a href="#"><img src="images/icons/nav2.jpg">订单中心</a></li>
+        <li><a href="#"><img src="images/icons/nav5.jpg">消费明细</a></li>
+        <li><a href="#"><img src="images/icons/nav7.jpg">地址管理</a></li>
+        <li><a href="#"><img src="images/icons/nav3.jpg">帮助中心</a></li>
+        <li><a href="#"><img src="images/icons/nav6.jpg">退出登录</a></li>
+    </ul>
+</section>
+
+<header class="header-box">
+	<div class="wrap">
+    	<a class="back" href="javascript:history.back(-1);"></a>
+    	<h2>订单消费记录</h2>
+        <a href="#" class="nav"></a>
+    </div>
+</header>
+
+
+<section class="container-box">
+
+	<div class="tab-sel clearfix" id="selectCard">
+        <a class="fl cur" href="javascript:;"><i class="icon3"></i>实体卡</a>
+        <a class="fr" href="javascript:;"><i class="icon4"></i>电子卡</a>
+    </div>
+
+    <div class="order-center">
+    
+    	<div class="succ-order" style="padding-top:10px;">
+        	<p>已抢总金额：<em>10000.00</em>元</p>
+            <p>已消费金额：<em>1000.00</em>元</p>
+            <p>剩余金额：<em>1000</em>元</p>
+            <p>总订单数：<em>1000</em>元</p>
+        </div>
+        
+        <div class="store-select clearfix">
+        	<span class="fl">门店筛选</span>
+            <div><select><option>全部</option></select></div>
+        </div>
+        
+        <ul class="order-date">
+            <li>
+                <span class="fl">起始时间</span>
+                <span class="fr" id="beginTime">2014-03-06</span>
+            </li>
+            <li>
+                <span class="fl" >截止时间</span>
+                <span class="fr" id="endTime">2014-03-06</span>
+            </li>
+        </ul>
+        
+        <div class="btn-box btn-box2">
+            <a class="a1" href="#">查询</a>
+        </div>
+        
+    	<dl>
+        	<dt class="cur">卡号：201510108406<i></i></dt>
+            <dd>
+            	<ul>
+                    <li>
+                        <span class="l fl">消费金额：</span>
+                        <span class="r"><i class="red">1000</i>元</span>
+                    </li>
+                    <li>
+                        <span class="l fl">油品</span>
+                        <span class="r">92#</span>
+                    </li>
+                    <li>
+                        <span class="l fl">油价</span>
+                        <span class="r">5.00元/升</span>
+                    </li>
+                    <li>
+                        <span class="l fl">油量</span>
+                        <span class="r">40升</span>
+                    </li>
+                    <li>
+                        <span class="l fl">余额</span>
+                        <span class="r"><i class="red">800</i>元</span>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl>
+        	<dt>卡号：201510108406<i></i></dt>
+            <dd>
+            	<ul>
+                    <li>
+                        <span class="l fl">消费金额：</span>
+                        <span class="r"><i class="red">1000</i>元</span>
+                    </li>
+                    <li>
+                        <span class="l fl">油品</span>
+                        <span class="r">92#</span>
+                    </li>
+                    <li>
+                        <span class="l fl">油价</span>
+                        <span class="r">5.00元/升</span>
+                    </li>
+                    <li>
+                        <span class="l fl">油量</span>
+                        <span class="r">40升</span>
+                    </li>
+                    <li>
+                        <span class="l fl">余额</span>
+                        <span class="r"><i class="red">800</i>元</span>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+   
+</section>
+
+<div id="datePlugin"></div>
+
+
+</body>
+</html>

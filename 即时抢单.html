@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>油我发起</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" CONTENT="-1">           
+<meta http-equiv="Cache-Control" CONTENT="no-cache">           
+<meta http-equiv="Pragma" CONTENT="no-cache">       
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/def.css">
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+	
+	var oMenu = $('.fixed-menu');
+	
+	$('.header-box .nav').click(function(e){
+		
+		if(oMenu.is(":hidden")){
+			 oMenu.show();
+		}else{
+			 oMenu.hide();
+		}
+		
+		e.stopPropagation();
+
+	});
+	
+	$("html,body").click(function(){
+		oMenu.hide();
+	});
+})
+</script>
+</head>
+
+<body bgcolor="#fafafa">
+
+
+<section class="fixed-menu hide">
+	<ul>
+    	<li><a href="#"><img src="images/icons/nav4.jpg">即时抢单</a></li>
+        <li><a href="#"><img src="images/icons/nav2.jpg">可抢订单</a></li>
+        <li><a href="#"><img src="images/icons/nav8.jpg">成功订单</a></li>
+        <li><a href="#"><img src="images/icons/nav5.jpg">订单消费情况</a></li>
+        <li><a href="#"><img src="images/icons/nav9.jpg">附近油站订单</a></li>
+        <li><a href="#"><img src="images/icons/nav10.jpg">错过的订单</a></li>
+        <li><a href="#"><img src="images/icons/nav6.jpg">退出登录</a></li>
+    </ul>
+</section>
+
+<header class="header-box">
+	<div class="wrap">
+    	<a class="back" href="javascript:history.back(-1);"></a>
+    	<h2>油我发起（油站版）</h2>
+        <a class="nav" href="javascript:;"></a>
+    </div>
+</header>
+
+<section class="container-box">
+	<div class="instant-grab">
+    	<div class="hd clearfix">
+        	<span class="fl">是否抢单？</span>
+            <a class="fr"><i></i>刷新订单</a>
+        </div>
+        <div class="bd">
+        	<div class="pic fl"><img width="68" src="images/icons/ring3.jpg"></div>
+            <div class="txt">认购金额 <em>1000</em> 元<br/>想要 <em>8%</em> 的优惠<br/>需要加 <em>92#</em> 油的订单<br/>想要 <em>8%</em> 的优惠<br/></div>
+            <div class="clearfix"></div>
+            <div class="date">剩余时间：<em>00</em>天<em>00</em>分<em>00</em>秒</div>
+        </div>
+        <div class="ft tc"><img width="200"  src="images/icons/shadow.jpg"></div>
+    </div>
+    
+    <div class="today-ranking">
+    	<h3>今日抢单排名</h3>
+        <table cellpadding="0" cellspacing="0" width="100%">
+        	<tbody>
+            	<tr>
+                	<td width="50" align="center">1</td>
+                    <td>
+                    	<h4>广州</h4>
+                        <p>昌源加油站</p>
+                    </td>
+                    <td>15648单</td>
+                    <td align="right">抢单率：89%</td>
+                </tr>
+                <tr>
+                	<td width="50" align="center">2</td>
+                    <td>
+                    	<h4>广州</h4>
+                        <p>昌源加油站</p>
+                    </td>
+                    <td>15648单</td>
+                    <td align="right">抢单率：89%</td>
+                </tr>
+                <tr>
+                	<td width="50" align="center">3</td>
+                    <td>
+                    	<h4>广州</h4>
+                        <p>昌源加油站</p>
+                    </td>
+                    <td>15648单</td>
+                    <td align="right">抢单率：89%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="btn-box">
+    	<a class="a1 default" href="#">马上抢单（58 s）</a>
+        <a class="a3" href="#">进入订单列表抢单</a>
+    </div>
+	
+</section>
+
+
+    
+</body>
+</html>

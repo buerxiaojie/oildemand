@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>油我发起</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" CONTENT="-1">           
+<meta http-equiv="Cache-Control" CONTENT="no-cache">           
+<meta http-equiv="Pragma" CONTENT="no-cache">       
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/def.css">
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+	$('.toggle-hd').click(function(){
+		$(this).next().toggle();	
+	});
+	
+	$('.toggle-bd li').click(function(){
+		$(this).addClass('cur').siblings().removeClass('cur');	
+		var _bankEle = $(this).find('.bank').html();
+		$('.toggle-hd').find('.bank').html(_bankEle);
+		$(this).parents('.toggle-bd').hide();
+	});	
+	
+})
+</script>
+<body bgcolor="#fafafa">
+
+<header class="header-box">
+	<div class="wrap">
+    	<h2>我要支付</h2>
+    </div>
+</header> 
+
+<section class="container-box">
+
+	<div class="height20"></div>
+	
+    <div class="pay-money">
+    	<div class="hd">支付金额：<em>400.00</em> 元</div>
+        <ul class="bd">
+        	<li><span>油我发起订单</span>商品名称</li>
+            <li><span>2015/09/24  15:38:15</span>支付时间</li>
+            <li><span>201509241538152298</span>交易订单号</li>
+        </ul>
+    </div>
+    
+    <div class="pay-ways">
+    	<div class="hd">
+        	<span class="fr">请在30分钟内完成订单支付</span> 
+        	<h3>支付方式</h3>
+        </div>
+        <div class="bd">
+        	<div class="toggle-hd clearfix">
+            	<span class="bank"><img width="40" src="images/bank/bank-yl.jpg"><em>银联在线</em></span>
+            	<span class="text">其他<i></i></span>
+            </div>
+            <div class="toggle-bd clearfix hide">
+            	<ul>
+                	<li class="cur"><span class="bank"><img width="40" src="images/bank/bank-yl.jpg"><em>银联在线</em></span></span><i class="checked"></i></li>
+                	<li><span class="bank"><img width="40" src="images/bank/bank-wx.jpg"><em>微信支付</em></span><i class="checked"></i></li>
+                    <li><span class="bank"><img width="40" src="images/bank/bank-zh.jpg"><em>中国银行</em></span><i class="checked"></i></li>
+                    <li><span class="bank"><img width="40" src="images/bank/bank-js.jpg"><em>中国建设银行</em></span><i class="checked"></i></li>
+                    <li><span class="bank"><img width="40" src="images/bank/bank-gh.jpg"><em>中国工商银行</em></span><i class="checked"></i></li>
+                    <li><span class="bank"><img width="40" src="images/bank/bank-ny.jpg"><em>中国农业银行</em></span><i class="checked"></i></li>
+                </ul>  
+            </div>
+        </div>
+    </div>
+    
+    <div class="btn-box">
+    	<a class="a1" href="javascript:;">确认支付</a>   
+        <a class="a3" href="javascript:;">返回商户</a>   
+    </div>    
+
+</section>
+
+
+
+</body>
+</html>

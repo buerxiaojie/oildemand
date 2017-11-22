@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>油我发起</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" CONTENT="-1">           
+<meta http-equiv="Cache-Control" CONTENT="no-cache">           
+<meta http-equiv="Pragma" CONTENT="no-cache">       
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/def.css">
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+	$('.order-center dt').click(function(){
+		var _next = $(this).next("dd");
+		if(_next.is(":hidden")){
+			$(this).addClass('cur');
+			_next.slideDown();
+		}else{
+			_next.slideUp();	
+			$(this).removeClass('cur');
+		}
+	}).eq(0).trigger("click");	
+})
+</script>
+
+
+</head>
+
+<body bgcolor="#fafafa">
+
+    <header class="header-box">
+        <div class="wrap">
+            <a class="back" href="javascript:;"></a>
+            <h2>发票</h2>
+        </div>
+    </header>
+    
+    
+    <section class="container-box">
+    
+    	<div class="form-box">
+            <ul>
+                <li>
+                    <label class="hd"><img src="images/icons/icon-fp.png"></label>
+                    <div class="bd">
+                        <input type="text" class="ipt" placeholder="请输入发票抬头">
+                    </div>
+                </li>
+
+            </ul>
+    
+        </div>
+        
+        <div class="invoice-bd">发票内容：92# (油品)</div>
+        
+        <div class="tab-sel clearfix" id="selectCard">
+            <a class="fl cur" href="javascript:;"><i class="icon3"></i>实体卡</a>
+            <a class="fr" href="javascript:;"><i class="icon4"></i>电子卡</a>
+        </div>
+       
+        <div class="form-box" style="padding-top:10px;">
+        	<h3 class="tit">收货人信息</h3>
+            <ul>
+                <li>
+                    <label class="hd"><img src="images/icons/icon-user.jpg"></label>
+                    <div class="bd">
+                        <input type="text" class="ipt" placeholder="请输入您的姓名">
+                    </div>
+                </li>
+                <li>
+                    <label class="hd"><img src="images/icons/icon-tel.png"></label>
+                    <div class="bd">
+                        <input type="text" class="ipt" placeholder="请输入您的手机号">
+                    </div>
+                </li>
+            </ul>
+    
+        </div>
+        
+        <div class="select-area">
+            <dl>
+                <dt class="clearfix">收货地址</dt>
+               <dd>
+                    <select class="sel sel3 fl"><option>省份/自治区</option></select>
+                    <select class="sel sel3 fl" style="margin: 0 2%;"><option>城市/地区</option></select>
+                    <select class="sel sel3 fl"><option>区/县</option></select>
+                    <div class="height15 clearfix"></div>
+                    <input type="text" class="ipt" placeholder="路名或街道地址，门牌号">
+                </dd>
+            </dl>
+            
+            <dl>
+                <dt class="clearfix">配送方式</dt>
+                <dd>
+                    <select class="sel"><option>平邮</option></select>
+                </dd>
+            </dl>
+        </div>
+        
+        <div class="notice-box">
+            发票申请细则：<br/>
+            1、发票金额不包括优惠折扣部分，本发票仅限油品消费。(优惠部分将在第一次开发票时扣除，之后按实际消费开发票)。<br/>
+            2、月底配送上月申请的油品消费发票。<br/>
+            3、在广东省中油碧辟加油的顾客，请在消费完成后在中油碧辟加油站现场索取发票，我司将不再开具发票。<br/>
+            4、如有其他特殊需求，请致电24小时客服热线：400-66-30666
+        </div>
+        
+        <div class="btn-box btn-box2">
+            <a class="a1" href="#" id="btn-sub">提交</a>
+        </div>    
+        
+        <div class="order-center">
+            <dl>
+                <dt class="cur">申请卡号：201510108406<i></i></dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <span class="l fl">抬头</span>
+                            <span class="r">中经汇通电子商务有限公司</span>
+                        </li>
+                        <li>
+                            <span class="l fl">卡类型</span>
+                            <span class="r">实体卡</span>
+                        </li>
+                        <li>
+                            <span class="l fl">状态</span>
+                            <span class="r"><i>未通过</i><br/><i><b>【回复】</b></i>由于您的资料未完善,请仔细核对详细信息后，联系客服重新申请。</span>
+                        </li>
+                        <li>
+                            <span class="l fl">申请时间</span>
+                            <span class="r">2015/9/1 13:30</span>
+                        </li>
+
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>申请卡号：201510108406<i></i></dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <span class="l fl">抬头</span>
+                            <span class="r">中经汇通电子商务有限公司</span>
+                        </li>
+                        <li>
+                            <span class="l fl">卡类型</span>
+                            <span class="r">实体卡</span>
+                        </li>
+                        <li>
+                            <span class="l fl">状态</span>
+                            <span class="r"><i>未通过</i><br/><i><b>【回复】</b></i>由于您的资料未完善,请仔细核对详细信息后，联系客服重新申请。</span>
+                        </li>
+                        <li>
+                            <span class="l fl">申请时间</span>
+                            <span class="r">2015/9/1 13:30</span>
+                        </li>
+
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+        
+        
+    </section>
+
+    
+</body>
+</html>

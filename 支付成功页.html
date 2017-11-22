@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>油我发起</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" CONTENT="-1">           
+<meta http-equiv="Cache-Control" CONTENT="no-cache">           
+<meta http-equiv="Pragma" CONTENT="no-cache">       
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/def.css">
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+	$('.check-order a.close').bind("click",function(){
+		$(this).parent().hide();	
+	})
+})
+</script>
+
+</head>
+
+<body bgcolor="#fafafa">
+
+<header class="header-box">
+	<div class="wrap">
+    	<a class="back" href="javascript:history.back(-1);"></a>
+    	<h2>支付成功</h2>
+        <a class="txt" href="#">查看订单</a>
+    </div>
+</header>
+
+<section class="container-box">
+
+	<div class="check-order">
+    	<span class="fl"><i></i>您的订单已被应答</span>
+        <a class="check fr" href="#">点击查看</a>
+        <a class="close" href="javascript:;"></a>
+    </div>
+    
+	<div class="resuit-show">
+    	<img width="128" src="images/icons/result-succ2.jpg">
+        <p>支付成功！请等待油站响应...</p>
+        <span>您可以在“查看订单”查看订单或等待信息提醒</span>
+    </div>
+   
+</section>
+
+
+    
+</body>
+</html>
